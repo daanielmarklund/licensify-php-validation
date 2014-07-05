@@ -4,7 +4,7 @@ Licensify PHP Validation
 This is our public library to connect your web application (it works as long as it's built on PHP. Themes, single pages etc) to our licensing service at Licensify. To read more about our service, please visit: http://www.licensify.com
 
 Requierments:
-PHP Version >= 5.2.0
+PHP Version >= 5.2.0, curl & json enabled
 
 1.0 Usage & Creating an account
 
