@@ -7,9 +7,9 @@ This is our public library to connect your web application (it works as long as 
 
 To use this library, you need to have an account at Licensify. If you don't have one, sign up at: https://www.licensify.com/dashboard/index.php/signup
 
-Once you have created an account, visit the "Settings" tab in the administrator dashboard.
+Once you have created an account, visit the "Settings" (https://www.licensify.com/dashboard/index.php/settings/) tab in the administrator dashboard.
 
-2. Obtaining the public key
+1.2 Obtaining the public key
 
 In the settings tab in the administration dashboard, you'll find a section named "API Keys".
 Copy the public key as it will be needed to configure the php library.
