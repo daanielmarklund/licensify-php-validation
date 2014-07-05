@@ -1,4 +1,8 @@
 <?php
+	if(!function_exists('curl_version')) {
+		die("You need to enable the cURL extension to use Licensify.");
+	}
+
 	class licensify {
 		/*
 			Licensing configuration
