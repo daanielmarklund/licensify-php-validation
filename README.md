@@ -22,3 +22,12 @@ We are assuming that you've already setup your product in the administrator dash
 
 Okay, you have all the information that we need. Open up "licensify.php" and go to line nr: 7. Insert your public key which you retrieved earlier on. On the line below (product_id), insert the unique product id you obtained earlier on. 
 Last but not least, choose your encryption key by editing the $crypt variable. This is highly recommended since it's the encryption key for the local storage for the license. 
+
+2.0 Features
+This library has all of the licensing features available plus the local storage.
+
+3.0 Debug
+To enable debugging, open licensify.php and set $debug to false (line nr 9). This will print out the messages from the licensing server.
+
+4.0 What does this library contain?
+This library contains everything you need to license your product. The library (licensify.php) and a quick demo of how to integrate it (index.php). To try out the features, simply insert "123456" as the purchase code when you are promted about it when running the index.php file in your browser.
