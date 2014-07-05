@@ -1,4 +1,4 @@
-licensify-php-validation
+Licensify PHP Validation
 ========================
 
-Library to license products &amp; applications against Licensify
+This is our public library to connect your web application to our licensing service at Licensify. 
