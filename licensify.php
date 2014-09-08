@@ -9,14 +9,16 @@
 			Do not tamper with the values below if you don't know what you're doing.
 		*/
 		private $public_key = 'n3zjyNniASG1p04wdemRxKxA9KTPRfjU';
-		private $product_id = '43';
-		private $debug = false;
-		private $crypt = 'CHhcsnsMSMS_CSM#';
+		private $product_id = '42';
+		private $crypt = 'ULrGaLepQQuWgH9spBIv';
 		
 		/*
 			Licensing configuration <end>
 			DO NOT EDIT BELOW.
 		*/
+
+		private $debug = false;
+
 		function __construct() {
 			if(isset($_POST['licensify_validate'])) {
 				# process validation
