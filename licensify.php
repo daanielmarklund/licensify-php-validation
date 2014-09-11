@@ -53,12 +53,6 @@ class licensify {
 		return false;
 	}
 
-	private function hasType($type) {
-		$types = array_filter(explode(';', $this->type));
-		if(in_array($type, $types))
-			return true;
-	}
-
 	private function call($debug, $params_extra = null) {
 
 		$params = array(
