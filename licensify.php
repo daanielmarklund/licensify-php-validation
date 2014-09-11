@@ -16,7 +16,6 @@ class licensify {
 		Licensing configuration <end>
 		DO NOT EDIT BELOW.
 	*/
-
 	private $debug = false;
 
 	function __construct() {
@@ -41,8 +40,11 @@ class licensify {
 		$data = file_get_contents($dir . '/s.key');
 		if($data) {
 			$res = json_decode($this->enc('decrypt', $data));
+			if(!isset($res->next_check) || !isset($res->product) || !isset($res->domain)) {
+				return false;
+			}
 
-			if($res->next_check < time() || $res->product != $this->product_id) {
+			if($res->next_check < time() || $res->product != $this->product_id || $_SERVER["SERVER_NAME"] != $res->domain) {
 				return false;
 			} else {
 				return true;
@@ -89,7 +91,7 @@ class licensify {
 		$resp = curl_exec($curl);
 
 		# debug
-		if(!$resp = curl_exec($curl)) {
+		if(!$resp) {
 			die("err:" . curl_error($curl));
 		}
 			
@@ -122,7 +124,6 @@ class licensify {
 			if(isset($resp->clear)) {
 				echo $resp->clear;
 			}
-
 			die;
 		}
 	}
@@ -164,6 +165,10 @@ class licensify {
                }
                return $r;				
 		}
+	}
+
+	private function pre($arr) {
+		echo '<pre>'; var_dump($arr); die;
 	}
 
 /*
