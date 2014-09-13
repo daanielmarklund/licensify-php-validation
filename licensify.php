@@ -132,7 +132,7 @@ class licensify {
 		$dir = dirname(__FILE__);
 		chmod($dir, 0755);
 
-		$f = fopen($key_file, 'w');
+		$f = fopen($dir . '/' . $key_file, 'w');
 		fwrite($f, $this->enc('encrypt', json_encode($data->details->local)));	
 	}
 
